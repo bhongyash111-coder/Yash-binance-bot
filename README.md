@@ -1,363 +1,224 @@
-# Binance Futures Trading Bot# Binance Futures Trading Bot
+# Binance Futures Trading Bot
 
+A comprehensive CLI-based trading bot for Binance USDT-M Futures that supports multiple order types with robust logging, validation, and documentation.
 
+## Assignment Submission
 
-A comprehensive CLI-based trading bot for Binance USDT-M Futures that supports multiple order types with robust logging, validation, and documentation.A comprehensive CLI-based trading bot for Binance USDT-M Futures that supports multiple order types with robust logging, validation, and documentation.
+**Student**: Yash Bhong  
+**Project**: Binance Future Order Bot  
+**Date**: October 2025
 
+## Features
 
+### Core Orders (Mandatory)
 
-## Project Overview## Assignment Submission
+- ✅ **Market Orders**: Immediate execution at current market price
+- ✅ **Limit Orders**: Execute at specified price or better
+- ✅ **Stop-Limit Orders**: Trigger limit orders when stop price is hit
+- ✅ **OCO Orders**: One-Cancels-Other orders for take-profit and stop-loss
 
-
-
-**Developer**: Yash Bhong  **Student**: Yash Bhong  
-
-**Project**: binance_tradebot  **Project**: binance_Future order bot  
-
-**Date**: October 2025  **Date**: October 2025  
-
-
-
-## Features## Features
-
-
-
-### Core Trading Features### Core Orders (Mandatory)
-
-- ✅ Market Orders - Instant execution at market price- ✅ **Market Orders**: Immediate execution at current market price
-
-- ✅ Limit Orders - Execute at specified price or better- ✅ **Limit Orders**: Execute at specified price or better
-
-- ✅ Stop-Limit Orders - Trigger limit orders at specified price
-
-- ✅ OCO (One-Cancels-Other) Orders - Combined take-profit and stop-loss### Advanced Orders (Bonus - Higher Priority)
-
-- ✅ TWAP Strategy - Time-Weighted Average Price execution- ✅ **Stop-Limit Orders**: Trigger limit orders when stop price is hit
-
-- ✅ Grid Trading - Automated buy-low/sell-high strategy- ✅ **OCO Orders**: One-Cancels-Other orders for take-profit and stop-loss
+### Advanced Orders (Bonus)
 
 - ✅ **TWAP Strategy**: Time-Weighted Average Price execution
+- ✅ **Grid Strategy**: Automated buy-low/sell-high within price range
 
-### Technical Implementation- ✅ **Grid Strategy**: Automated buy-low/sell-high within price range
+### Technical Features
 
-- Comprehensive logging system with timestamps
-
-- Full input validation for all parameters### Technical Features
-
-- Robust error handling and recovery- ✅ **Comprehensive Logging**: Structured logging with timestamps and error traces
-
-- Safe testnet integration- ✅ **Input Validation**: Validate symbol, quantity, and price thresholds
-
-- Modular and maintainable codebase- ✅ **Error Handling**: Robust error handling for all scenarios
-
+- ✅ **Comprehensive Logging**: Structured logging with timestamps and error traces
+- ✅ **Input Validation**: Validate symbol, quantity, and price thresholds
+- ✅ **Error Handling**: Robust error handling for all scenarios
 - ✅ **Testnet Integration**: Safe testing environment
+- ✅ **Modular Design**: Separate modules for different order types
 
-## Quick Start- ✅ **Modular Design**: Separate modules for different order types
+## Installation
 
-
-
-### 1. Installation## Installation
-
-
-
-```bash1. Clone the repository:
-
-# Clone the repository```bash
-
-git clone https://github.com/bhongyash111-coder/Yash-binance-bot.gitgit clone <repository-url>
-
-cd binancetrade_botcd binancetrade_bot
-
+1. Clone the repository:
+```bash
+git clone https://github.com/bhongyash111-coder/Yash-binance-bot.git
+cd binancetrade_bot
 ```
 
-# Install dependencies
-
-pip install -r requirements.txt2. Install dependencies:
-
-``````bash
-
+2. Install dependencies:
+```bash
 pip install -r requirements.txt
-
-### 2. Configuration```
-
-
-
-The bot uses these Binance Testnet API credentials:3. Get your Binance Testnet API credentials:
-
-```   - Visit [Binance Testnet](https://testnet.binancefuture.com/)
-
-API Key: hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX   - Register and activate your account
-
-Secret Key: PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd   - Generate API key and secret
-
 ```
+
+3. Get your Binance Testnet API credentials:
+   - Visit [Binance Testnet](https://testnet.binancefuture.com/)
+   - Register and activate your account
+   - Generate API key and secret
 
 ## Usage
 
-### 3. Basic Usage
-
 ### Basic Usage
 
-```bash
-
-# Market Order```bash
-
-python src/market_orders.py BTCUSDT BUY 0.001 --api-key YOUR_KEY --api-secret YOUR_SECRETpython src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET [command]
-
-```
-
-# Limit Order
-
-python src/limit_orders.py BTCUSDT BUY 0.001 50000 --api-key YOUR_KEY --api-secret YOUR_SECRET### Available Commands
-
-
-
-# Stop-Limit Order#### 1. Market Order
-
-python src/advanced/stop_limit.py BTCUSDT SELL 0.001 45000 46000 --api-key YOUR_KEY --api-secret YOUR_SECRETPlace a market order (immediate execution at current market price):
-
-```
+All commands follow this pattern:
 
 ```bash
-
-## Project Structurepython src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET market BTCUSDT BUY 0.001
-
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET [command] [arguments]
 ```
 
+### Available Commands
+
+#### 1. Market Order
+Place a market order (immediate execution at current market price):
+
+```bash
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET market BTCUSDT BUY 0.001
 ```
 
-├── src/                     # Source code#### 2. Limit Order
+#### 2. Limit Order
+Place a limit order (executes only at specified price or better):
 
-│   ├── market_orders.py     # Market order implementationPlace a limit order (executes only at specified price or better):
-
-│   ├── limit_orders.py      # Limit order implementation
-
-│   ├── logging_config.py    # Logging configuration```bash
-
-│   └── advanced/           # Advanced trading strategiespython src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET limit BTCUSDT BUY 0.001 50000
-
-│       ├── oco.py          # OCO order implementation```
-
-│       ├── twap.py         # TWAP strategy
-
-│       ├── grid_strategy.py # Grid trading#### 3. Stop-Limit Order
-
-│       └── stop_limit.py   # Stop-limit ordersPlace a stop-limit order (triggers when stop price is reached):
-
-├── requirements.txt         # Python dependencies
-
-└── README.md               # Documentation```bash
-
-```python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET stop-limit BTCUSDT SELL 0.001 45000 46000
-
+```bash
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET limit BTCUSDT BUY 0.001 50000
 ```
 
-## Available Commands
+#### 3. Stop-Limit Order
+Place a stop-limit order (triggers when stop price is reached):
+
+```bash
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET stop-limit BTCUSDT SELL 0.001 45000 46000
+```
 
 #### 4. OCO Order (One-Cancels-Other)
-
-### Market OperationsPlace an OCO order (combines limit and stop orders):
+Place an OCO order (combines limit and stop orders):
 
 ```bash
-
-# Check Account Balance```bash
-
-python src/basic_bot.py --api-key YOUR_KEY --api-secret YOUR_SECRET accountpython src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET oco BTCUSDT SELL 0.001 55000 50000 49000
-
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET oco BTCUSDT SELL 0.001 55000 50000 49000
 ```
 
-# Get Current Price
-
-python src/basic_bot.py --api-key YOUR_KEY --api-secret YOUR_SECRET price BTCUSDT#### 5. Account Information
-
+#### 5. Account Information
 View your account balance and information:
 
-# Place Market Order
-
-python src/basic_bot.py --api-key YOUR_KEY --api-secret YOUR_SECRET market BTCUSDT BUY 0.001```bash
-
+```bash
 python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET account
+```
 
-# Place Limit Order```
-
-python src/basic_bot.py --api-key YOUR_KEY --api-secret YOUR_SECRET limit BTCUSDT BUY 0.001 50000
-
-```#### 6. Get Current Price
-
+#### 6. Get Current Price
 Get the current price of a trading pair:
 
-### Advanced Orders
+```bash
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET price BTCUSDT
+```
 
-```bash```bash
-
-# OCO Order (One-Cancels-Other)python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET price BTCUSDT
-
-python src/advanced/oco.py BTCUSDT SELL 0.001 55000 50000 49000 --api-key YOUR_KEY --api-secret YOUR_SECRET```
-
-
-
-# TWAP Strategy#### 7. View Open Orders
-
-python src/advanced/twap.py BTCUSDT BUY 0.01 10 5 --api-key YOUR_KEY --api-secret YOUR_SECRETView all open orders:
-
-
-
-# Grid Strategy```bash
-
-python src/advanced/grid_strategy.py BTCUSDT 45000 55000 10 0.001 --api-key YOUR_KEY --api-secret YOUR_SECRETpython src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET orders
-
-``````
-
-
-
-## Error HandlingFilter by symbol:
+#### 7. View Open Orders
+View all open orders:
 
 ```bash
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET orders
+```
 
-The bot handles various scenarios:python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET orders --symbol BTCUSDT
+Filter by symbol:
 
-- Invalid API credentials```
+```bash
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET orders --symbol BTCUSDT
+```
 
-- Network connectivity issues
+### Advanced Order Modules
 
-- Invalid order parameters## API Credentials
+You can also use individual modules directly:
 
-- Insufficient balance
+```bash
+# Market order
+python src/market_orders.py BTCUSDT BUY 0.001 --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET
 
-- API rate limitsThe bot uses the following API credentials (already configured for testnet):
+# Limit order
+python src/limit_orders.py BTCUSDT BUY 0.001 50000 --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET
 
-- API Key: `hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX`
+# OCO order
+python src/advanced/oco.py BTCUSDT SELL 0.001 55000 50000 49000 --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET
 
-## Logging- Secret Key: `PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd`
+# TWAP strategy (symbol, side, total_quantity, num_orders, time_interval_minutes)
+python src/advanced/twap.py BTCUSDT BUY 0.01 10 5 --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET
 
+# Grid strategy (symbol, lower_price, upper_price, grid_levels, quantity_per_order)
+python src/advanced/grid_strategy.py BTCUSDT 45000 55000 10 0.001 --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET
 
-
-All operations are logged in `bot.log`:## Logging
-
-- Timestamps for all operations
-
-- API request/response detailsAll API requests, responses, and errors are logged to `bot.log` file. The log includes:
-
-- Error messages and stack traces- Timestamp of each operation
-
-- Performance metrics- API request details
-
-- Response data
-
-## Safety Features- Error messages and stack traces
-
-
-
-- **Testnet Only**: No real funds at risk## Error Handling
-
-- Input validation on all parameters
-
-- Comprehensive error loggingThe bot includes comprehensive error handling for:
-
-- Rate limit compliance- Invalid API credentials
-
-- Safe order execution- Network connectivity issues
-
-- Invalid order parameters
-
-## Support- Insufficient balance
-
-- API rate limiting
-
-For issues or questions:
-
-1. Check the `bot.log` file for detailed error information## Example Usage Session
-
-2. Review the documentation
-
-3. Submit an issue in the GitHub repository```bash
-# Check account balance
-python src/basic_bot.py --api-key hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX --api-secret PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd account
-
-# Get current BTC price
-python src/basic_bot.py --api-key hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX --api-secret PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd price BTCUSDT
-
-# Place a small test market order
-python src/basic_bot.py --api-key hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX --api-secret PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd market BTCUSDT BUY 0.001
-
-# Check open orders
-python src/basic_bot.py --api-key hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX --api-secret PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd orders
+# Stop-limit order
+python src/advanced/stop_limit.py BTCUSDT SELL 0.001 45000 46000 --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET
 ```
 
 ## Project Structure
 
 ```
-[project_root]/
-├── /src/                    # All source code
-│   ├── market_orders.py     # Market order logic
-│   ├── limit_orders.py      # Limit order logic
-│   ├── logging_config.py    # Comprehensive logging system
-│   └── /advanced/           # Advanced order types
-│       ├── oco.py           # OCO order logic
-│       ├── twap.py          # TWAP strategy
-│       ├── grid_strategy.py # Grid trading strategy
+binancetrade_bot/
+├── src/
+│   ├── market_orders.py      # Market order implementation
+│   ├── limit_orders.py       # Limit order implementation
+│   ├── logging_config.py     # Logging configuration
+│   └── advanced/             # Advanced trading strategies
+│       ├── oco.py            # OCO order implementation
+│       ├── twap.py           # TWAP strategy
+│       ├── grid_strategy.py  # Grid trading strategy
 │       └── stop_limit.py     # Stop-limit orders
-├── bot.log                  # Structured logs (API calls, errors, executions)
-├── requirements.txt         # Python dependencies
-└── README.md               # Setup, dependencies, usage
+├── bot.log                   # Log file (auto-generated)
+├── requirements.txt          # Python dependencies
+└── README.md                 # Documentation
 ```
 
-## Quick Start
+## Logging
 
-1. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+All API requests, responses, and errors are logged to `bot.log` file with:
 
-2. **Get Binance Testnet API credentials:**
-   - Visit [Binance Testnet](https://testnet.binancefuture.com/)
-   - Register and activate your account
-   - Generate API key and secret
+- Timestamp of each operation
+- API request details
+- Response data
+- Error messages and stack traces
 
-3. **Run the bot with your credentials:**
-   ```bash
-   # Market order example
-   python src/market_orders.py BTCUSDT BUY 0.001 --api-key hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX --api-secret PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd
-   
-   # Limit order example
-   python src/limit_orders.py BTCUSDT BUY 0.001 50000 --api-key hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX --api-secret PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd
-   
-   # Advanced orders
-   python src/advanced/oco.py BTCUSDT SELL 0.001 55000 50000 49000 --api-key hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX --api-secret PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd
-   python src/advanced/twap.py BTCUSDT BUY 0.01 10 5 --api-key hQO5myPVvA9HoBteaPLoMMIyJR6fXNkXlQAuRmyR5YB563lp1Am8MQ7p9ojJCzeX --api-secret PPDpZI1J7HhBAsz9vFdYA3Dg3KJekl8KrC62nxJKAE4kwvwwbUyD70PLfQRDBd
-   ```
+## Error Handling
 
-## Simple Usage (with run_bot.py)
+The bot includes comprehensive error handling for:
 
-The `run_bot.py` script provides a simplified interface:
+- Invalid API credentials
+- Network connectivity issues
+- Invalid order parameters
+- Insufficient balance
+- API rate limiting
+
+## Safety Features
+
+- **Testnet Only**: No real funds at risk
+- **Input Validation**: All parameters are validated before execution
+- **Comprehensive Logging**: Track all operations and errors
+- **Rate Limit Compliance**: Respects API rate limits
+- **Safe Order Execution**: Validates orders before submission
+
+## Example Usage Session
 
 ```bash
-# Check account
-python run_bot.py account
+# Check account balance
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET account
 
-# Get price
-python run_bot.py price BTCUSDT
+# Get current BTC price
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET price BTCUSDT
 
-# Place market order
-python run_bot.py market BTCUSDT BUY 0.001
+# Place a small test market order
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET market BTCUSDT BUY 0.001
 
-# Place limit order
-python run_bot.py limit BTCUSDT BUY 0.001 50000
-
-# View open orders
-python run_bot.py orders
+# Check open orders
+python src/basic_bot.py --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET orders
 ```
-
-## Safety Notes
-
-- This bot is configured for **TESTNET ONLY** - no real money is involved
-- Always test with small amounts first
-- Monitor the log file for any errors
-- The testnet has limited functionality compared to mainnet
 
 ## Support
 
-For issues or questions, check the log file `bot.log` for detailed error information.
-#   Y a s h - b i n a n c e - b o t 
- 
- 
+For issues or questions:
+
+1. Check the `bot.log` file for detailed error information
+2. Review this documentation
+3. Submit an issue in the GitHub repository: https://github.com/bhongyash111-coder/Yash-binance-bot
+
+## Security Best Practices
+
+⚠️ **Important Security Notes:**
+
+- **Never commit API keys** to version control
+- Store credentials in environment variables or secure configuration files
+- Use `.gitignore` to exclude sensitive files
+- This bot is for **TESTNET ONLY** - always test thoroughly before using on mainnet
+- Regularly rotate your API keys
+- Use API key restrictions (IP whitelist, permissions) when possible
+
+## License
+
+This project is created for educational purposes as part of an assignment.
