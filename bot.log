@@ -1,0 +1,441 @@
+2025-10-24 11:16:06,964 - BinanceBot - INFO - Connected to Binance Testnet
+2025-10-24 11:16:07,882 - BinanceBot - ERROR - Connection test failed: APIError(code=-1022): Signature for this request is not valid.
+2025-10-24 11:16:07,882 - BinanceBot - ERROR - Failed to initialize client: APIError(code=-1022): Signature for this request is not valid.
+2025-10-24 11:33:16,074 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:33:16,075 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:33:16,076 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:33:16,076 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:33:16,077 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000 USDT (Available: 950)
+2025-10-24 11:33:16,077 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:33:16,078 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 10 trades, 70.0% win rate, PnL: 150.50
+2025-10-24 11:33:16,083 - TradingBot - ERROR - log_error:150 - Error in Test context: Test error for logging
+2025-10-24 11:33:16,083 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 44, in test_logging_system
+    raise ValueError("Test error for logging")
+ValueError: Test error for logging
+
+2025-10-24 11:33:16,086 - TradingBot - INFO - place_market_order:38 - Placing market BUY order for 0.001 BTCUSDT
+2025-10-24 11:33:16,087 - TradingBot - INFO - place_market_order:39 - Position side: BOTH
+2025-10-24 11:33:16,087 - TradingBot - INFO - place_market_order:58 - Market order placed successfully: 12345
+2025-10-24 11:33:16,087 - TradingBot - INFO - place_market_order:59 - Order status: FILLED
+2025-10-24 11:33:16,087 - TradingBot - INFO - place_market_order:60 - Executed quantity: 0.001
+2025-10-24 11:33:16,088 - TradingBot - INFO - place_market_order:61 - Average price: 50000
+2025-10-24 11:33:16,090 - TradingBot - INFO - place_limit_order:40 - Placing limit BUY order for 0.001 BTCUSDT at 50000
+2025-10-24 11:33:16,090 - TradingBot - INFO - place_limit_order:41 - Time in force: GTC, Position side: BOTH
+2025-10-24 11:33:16,091 - TradingBot - INFO - place_limit_order:68 - Limit order placed successfully: 12346
+2025-10-24 11:33:16,092 - TradingBot - INFO - place_limit_order:69 - Order status: NEW
+2025-10-24 11:33:16,092 - TradingBot - INFO - place_limit_order:70 - Order price: 50000
+2025-10-24 11:33:16,092 - TradingBot - INFO - place_limit_order:71 - Order quantity: 0.001
+2025-10-24 11:33:16,095 - TradingBot - INFO - place_oco_order:43 - Placing OCO SELL order for 0.001 BTCUSDT
+2025-10-24 11:33:16,096 - TradingBot - INFO - place_oco_order:44 - Limit price: 55000, Stop price: 50000, Stop limit: 49000
+2025-10-24 11:33:16,096 - TradingBot - INFO - place_oco_order:45 - Position side: BOTH
+2025-10-24 11:33:16,097 - TradingBot - ERROR - place_oco_order:101 - Unexpected error placing OCO order: For SELL orders: stop_price should be > limit_price
+2025-10-24 11:33:16,097 - TradingBot - INFO - place_stop_limit_order:41 - Placing stop-limit SELL order for 0.001 BTCUSDT
+2025-10-24 11:33:16,097 - TradingBot - INFO - place_stop_limit_order:42 - Stop price: 45000, Limit price: 44000
+2025-10-24 11:33:16,097 - TradingBot - INFO - place_stop_limit_order:43 - Position side: BOTH
+2025-10-24 11:33:16,098 - TradingBot - INFO - place_stop_limit_order:76 - Stop-limit order placed successfully: 12347
+2025-10-24 11:33:16,098 - TradingBot - INFO - place_stop_limit_order:77 - Order status: NEW
+2025-10-24 11:33:16,099 - TradingBot - ERROR - place_stop_limit_order:96 - Unexpected error placing stop-limit order: 'stopPrice'
+2025-10-24 11:33:16,101 - TradingBot - INFO - execute_twap_order:46 - Starting TWAP strategy TWAP_BTCUSDT_BUY_1761285796
+2025-10-24 11:33:16,101 - TradingBot - INFO - execute_twap_order:47 - Symbol: BTCUSDT, Side: BUY, Total Qty: 0.01
+2025-10-24 11:33:16,101 - TradingBot - INFO - execute_twap_order:48 - Duration: 1 minutes, Slices: 2
+2025-10-24 11:33:16,102 - TradingBot - INFO - execute_twap_order:67 - Slice quantity: 0.005
+2025-10-24 11:33:16,102 - TradingBot - INFO - execute_twap_order:68 - Slice interval: 30.0 seconds
+2025-10-24 11:33:16,103 - TradingBot - INFO - _execute_slice:169 - Executing slice 1/2 for TWAP_BTCUSDT_BUY_1761285796
+2025-10-24 11:33:16,104 - TradingBot - INFO - execute_twap_order:98 - TWAP strategy TWAP_BTCUSDT_BUY_1761285796 started successfully
+2025-10-24 11:33:16,104 - TradingBot - INFO - _execute_slice:170 - Slice quantity: 0.005, Current price: 50000.0
+2025-10-24 11:33:16,104 - TradingBot - INFO - create_grid_strategy:48 - Creating grid strategy GRID_BTCUSDT_BUY_1761285796
+2025-10-24 11:33:16,105 - TradingBot - INFO - _execute_slice:197 - Slice 1 executed successfully: Order order_1761285796
+2025-10-24 11:33:16,105 - TradingBot - INFO - create_grid_strategy:49 - Symbol: BTCUSDT, Type: BUY
+2025-10-24 11:33:16,105 - TradingBot - INFO - _execute_slice:198 - Remaining quantity: 0.005
+2025-10-24 11:33:16,105 - TradingBot - INFO - create_grid_strategy:50 - Price range: 45000 - 55000
+2025-10-24 11:33:16,106 - TradingBot - INFO - _execute_slice:199 - Average price so far: 50000.00
+2025-10-24 11:33:16,106 - TradingBot - INFO - create_grid_strategy:51 - Grid count: 5, Quantity per level: 0.001
+2025-10-24 11:33:16,107 - TradingBot - INFO - _execute_grid_order:204 - Executing grid order at level 3 for GRID_BTCUSDT_BUY_1761285796
+2025-10-24 11:33:16,107 - TradingBot - INFO - create_grid_strategy:109 - Grid strategy GRID_BTCUSDT_BUY_1761285796 created and monitoring started
+2025-10-24 11:33:16,107 - TradingBot - INFO - _execute_grid_order:205 - Price: 50000.0, Quantity: 0.001, Side: BUY
+2025-10-24 11:33:16,108 - TradingBot - INFO - _execute_grid_order:227 - Grid order executed successfully: order_1761285796
+2025-10-24 11:33:16,110 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:33:16,110 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000.0 USDT (Available: 950.0)
+2025-10-24 11:33:16,111 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:33:16,111 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:33:16,111 - TradingBot - INFO - log_order_placement:100 - Order PLACED: LIMIT SELL 0.001 BTCUSDT @ 55000
+2025-10-24 11:33:16,112 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: OCO OCO_123 - ORDER_PLACED
+2025-10-24 11:33:16,112 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - STRATEGY_STARTED
+2025-10-24 11:33:16,113 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:33:16,113 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: GRID GRID_123 - GRID_CREATED
+2025-10-24 11:33:16,113 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:33:16,114 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50100 -> 49900 (-0.40%)
+2025-10-24 11:33:16,114 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 15 trades, 66.7% win rate, PnL: 250.75
+2025-10-24 11:33:16,115 - TradingBot - ERROR - log_error:150 - Error in API Connection: Simulated API connection error
+2025-10-24 11:33:16,116 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 255, in create_sample_log
+    raise ConnectionError("Simulated API connection error")
+ConnectionError: Simulated API connection error
+
+2025-10-24 11:44:41,540 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:44:41,541 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:44:41,542 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:44:41,542 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:44:41,542 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000 USDT (Available: 950)
+2025-10-24 11:44:41,542 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:44:41,542 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 10 trades, 70.0% win rate, PnL: 150.50
+2025-10-24 11:44:41,544 - TradingBot - ERROR - log_error:150 - Error in Test context: Test error for logging
+2025-10-24 11:44:41,545 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 44, in test_logging_system
+    raise ValueError("Test error for logging")
+ValueError: Test error for logging
+
+2025-10-24 11:44:41,547 - TradingBot - INFO - place_market_order:38 - Placing market BUY order for 0.001 BTCUSDT
+2025-10-24 11:44:41,547 - TradingBot - INFO - place_market_order:39 - Position side: BOTH
+2025-10-24 11:44:41,547 - TradingBot - INFO - place_market_order:58 - Market order placed successfully: 12345
+2025-10-24 11:44:41,547 - TradingBot - INFO - place_market_order:59 - Order status: FILLED
+2025-10-24 11:44:41,547 - TradingBot - INFO - place_market_order:60 - Executed quantity: 0.001
+2025-10-24 11:44:41,548 - TradingBot - INFO - place_market_order:61 - Average price: 50000
+2025-10-24 11:44:41,549 - TradingBot - INFO - place_limit_order:40 - Placing limit BUY order for 0.001 BTCUSDT at 50000
+2025-10-24 11:44:41,549 - TradingBot - INFO - place_limit_order:41 - Time in force: GTC, Position side: BOTH
+2025-10-24 11:44:41,550 - TradingBot - INFO - place_limit_order:68 - Limit order placed successfully: 12346
+2025-10-24 11:44:41,550 - TradingBot - INFO - place_limit_order:69 - Order status: NEW
+2025-10-24 11:44:41,550 - TradingBot - INFO - place_limit_order:70 - Order price: 50000
+2025-10-24 11:44:41,551 - TradingBot - INFO - place_limit_order:71 - Order quantity: 0.001
+2025-10-24 11:44:41,552 - TradingBot - INFO - place_oco_order:43 - Placing OCO SELL order for 0.001 BTCUSDT
+2025-10-24 11:44:41,552 - TradingBot - INFO - place_oco_order:44 - Limit price: 55000, Stop price: 50000, Stop limit: 49000
+2025-10-24 11:44:41,553 - TradingBot - INFO - place_oco_order:45 - Position side: BOTH
+2025-10-24 11:44:41,553 - TradingBot - ERROR - place_oco_order:101 - Unexpected error placing OCO order: For SELL orders: stop_price should be > limit_price
+2025-10-24 11:44:41,553 - TradingBot - INFO - place_stop_limit_order:41 - Placing stop-limit SELL order for 0.001 BTCUSDT
+2025-10-24 11:44:41,554 - TradingBot - INFO - place_stop_limit_order:42 - Stop price: 45000, Limit price: 44000
+2025-10-24 11:44:41,554 - TradingBot - INFO - place_stop_limit_order:43 - Position side: BOTH
+2025-10-24 11:44:41,554 - TradingBot - INFO - place_stop_limit_order:76 - Stop-limit order placed successfully: 12347
+2025-10-24 11:44:41,554 - TradingBot - INFO - place_stop_limit_order:77 - Order status: NEW
+2025-10-24 11:44:41,555 - TradingBot - ERROR - place_stop_limit_order:96 - Unexpected error placing stop-limit order: 'stopPrice'
+2025-10-24 11:44:41,557 - TradingBot - INFO - execute_twap_order:46 - Starting TWAP strategy TWAP_BTCUSDT_BUY_1761286481
+2025-10-24 11:44:41,557 - TradingBot - INFO - execute_twap_order:47 - Symbol: BTCUSDT, Side: BUY, Total Qty: 0.01
+2025-10-24 11:44:41,557 - TradingBot - INFO - execute_twap_order:48 - Duration: 1 minutes, Slices: 2
+2025-10-24 11:44:41,557 - TradingBot - INFO - execute_twap_order:67 - Slice quantity: 0.005
+2025-10-24 11:44:41,557 - TradingBot - INFO - execute_twap_order:68 - Slice interval: 30.0 seconds
+2025-10-24 11:44:41,559 - TradingBot - INFO - _execute_slice:169 - Executing slice 1/2 for TWAP_BTCUSDT_BUY_1761286481
+2025-10-24 11:44:41,559 - TradingBot - INFO - execute_twap_order:98 - TWAP strategy TWAP_BTCUSDT_BUY_1761286481 started successfully
+2025-10-24 11:44:41,559 - TradingBot - INFO - _execute_slice:170 - Slice quantity: 0.005, Current price: 50000.0
+2025-10-24 11:44:41,560 - TradingBot - INFO - create_grid_strategy:48 - Creating grid strategy GRID_BTCUSDT_BUY_1761286481
+2025-10-24 11:44:41,560 - TradingBot - INFO - _execute_slice:197 - Slice 1 executed successfully: Order order_1761286481
+2025-10-24 11:44:41,560 - TradingBot - INFO - create_grid_strategy:49 - Symbol: BTCUSDT, Type: BUY
+2025-10-24 11:44:41,560 - TradingBot - INFO - _execute_slice:198 - Remaining quantity: 0.005
+2025-10-24 11:44:41,561 - TradingBot - INFO - create_grid_strategy:50 - Price range: 45000 - 55000
+2025-10-24 11:44:41,561 - TradingBot - INFO - _execute_slice:199 - Average price so far: 50000.00
+2025-10-24 11:44:41,561 - TradingBot - INFO - create_grid_strategy:51 - Grid count: 5, Quantity per level: 0.001
+2025-10-24 11:44:41,563 - TradingBot - INFO - _execute_grid_order:204 - Executing grid order at level 3 for GRID_BTCUSDT_BUY_1761286481
+2025-10-24 11:44:41,563 - TradingBot - INFO - create_grid_strategy:109 - Grid strategy GRID_BTCUSDT_BUY_1761286481 created and monitoring started
+2025-10-24 11:44:41,564 - TradingBot - INFO - _execute_grid_order:205 - Price: 50000.0, Quantity: 0.001, Side: BUY
+2025-10-24 11:44:41,564 - TradingBot - INFO - _execute_grid_order:227 - Grid order executed successfully: order_1761286481
+2025-10-24 11:44:41,566 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:44:41,566 - TradingBot - INFO - _execute_grid_order:204 - Executing grid order at level 4 for GRID_BTCUSDT_BUY_1761286481
+2025-10-24 11:44:41,567 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000.0 USDT (Available: 950.0)
+2025-10-24 11:44:41,567 - TradingBot - INFO - _execute_grid_order:205 - Price: 52500.0, Quantity: 0.001, Side: BUY
+2025-10-24 11:44:41,567 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:44:41,567 - TradingBot - INFO - _execute_grid_order:227 - Grid order executed successfully: order_1761286481
+2025-10-24 11:44:41,568 - TradingBot - INFO - _execute_grid_order:204 - Executing grid order at level 5 for GRID_BTCUSDT_BUY_1761286481
+2025-10-24 11:44:41,568 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:44:41,569 - TradingBot - INFO - log_order_placement:100 - Order PLACED: LIMIT SELL 0.001 BTCUSDT @ 55000
+2025-10-24 11:44:41,569 - TradingBot - INFO - _execute_grid_order:205 - Price: 55000.0, Quantity: 0.001, Side: BUY
+2025-10-24 11:44:41,570 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: OCO OCO_123 - ORDER_PLACED
+2025-10-24 11:44:41,570 - TradingBot - INFO - _execute_grid_order:227 - Grid order executed successfully: order_1761286481
+2025-10-24 11:44:41,570 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - STRATEGY_STARTED
+2025-10-24 11:44:41,571 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:44:41,572 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: GRID GRID_123 - GRID_CREATED
+2025-10-24 11:44:41,572 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:44:41,572 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50100 -> 49900 (-0.40%)
+2025-10-24 11:44:41,574 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 15 trades, 66.7% win rate, PnL: 250.75
+2025-10-24 11:44:41,575 - TradingBot - ERROR - log_error:150 - Error in API Connection: Simulated API connection error
+2025-10-24 11:44:41,576 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 255, in create_sample_log
+    raise ConnectionError("Simulated API connection error")
+ConnectionError: Simulated API connection error
+
+2025-10-24 11:45:48,715 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:45:48,716 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:45:48,716 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:45:48,717 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:45:48,717 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000 USDT (Available: 950)
+2025-10-24 11:45:48,718 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:45:48,718 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 10 trades, 70.0% win rate, PnL: 150.50
+2025-10-24 11:45:48,719 - TradingBot - ERROR - log_error:150 - Error in Test context: Test error for logging
+2025-10-24 11:45:48,720 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 44, in test_logging_system
+    raise ValueError("Test error for logging")
+ValueError: Test error for logging
+
+2025-10-24 11:45:48,723 - TradingBot - INFO - place_market_order:38 - Placing market BUY order for 0.001 BTCUSDT
+2025-10-24 11:45:48,724 - TradingBot - INFO - place_market_order:39 - Position side: BOTH
+2025-10-24 11:45:48,724 - TradingBot - INFO - place_market_order:58 - Market order placed successfully: 12345
+2025-10-24 11:45:48,724 - TradingBot - INFO - place_market_order:59 - Order status: FILLED
+2025-10-24 11:45:48,724 - TradingBot - INFO - place_market_order:60 - Executed quantity: 0.001
+2025-10-24 11:45:48,725 - TradingBot - INFO - place_market_order:61 - Average price: 50000
+2025-10-24 11:45:48,727 - TradingBot - INFO - place_limit_order:40 - Placing limit BUY order for 0.001 BTCUSDT at 50000
+2025-10-24 11:45:48,728 - TradingBot - INFO - place_limit_order:41 - Time in force: GTC, Position side: BOTH
+2025-10-24 11:45:48,729 - TradingBot - INFO - place_limit_order:68 - Limit order placed successfully: 12346
+2025-10-24 11:45:48,729 - TradingBot - INFO - place_limit_order:69 - Order status: NEW
+2025-10-24 11:45:48,730 - TradingBot - INFO - place_limit_order:70 - Order price: 50000
+2025-10-24 11:45:48,730 - TradingBot - INFO - place_limit_order:71 - Order quantity: 0.001
+2025-10-24 11:45:48,734 - TradingBot - INFO - place_oco_order:43 - Placing OCO SELL order for 0.001 BTCUSDT
+2025-10-24 11:45:48,734 - TradingBot - INFO - place_oco_order:44 - Limit price: 55000, Stop price: 50000, Stop limit: 49000
+2025-10-24 11:45:48,735 - TradingBot - INFO - place_oco_order:45 - Position side: BOTH
+2025-10-24 11:45:48,737 - TradingBot - ERROR - place_oco_order:101 - Unexpected error placing OCO order: For SELL orders: stop_price should be > limit_price
+2025-10-24 11:45:48,737 - TradingBot - INFO - place_stop_limit_order:41 - Placing stop-limit SELL order for 0.001 BTCUSDT
+2025-10-24 11:45:48,738 - TradingBot - INFO - place_stop_limit_order:42 - Stop price: 45000, Limit price: 44000
+2025-10-24 11:45:48,738 - TradingBot - INFO - place_stop_limit_order:43 - Position side: BOTH
+2025-10-24 11:45:48,738 - TradingBot - INFO - place_stop_limit_order:76 - Stop-limit order placed successfully: 12347
+2025-10-24 11:45:48,739 - TradingBot - INFO - place_stop_limit_order:77 - Order status: NEW
+2025-10-24 11:45:48,739 - TradingBot - ERROR - place_stop_limit_order:96 - Unexpected error placing stop-limit order: 'stopPrice'
+2025-10-24 11:45:48,742 - TradingBot - INFO - execute_twap_order:46 - Starting TWAP strategy TWAP_BTCUSDT_BUY_1761286548
+2025-10-24 11:45:48,742 - TradingBot - INFO - execute_twap_order:47 - Symbol: BTCUSDT, Side: BUY, Total Qty: 0.01
+2025-10-24 11:45:48,742 - TradingBot - INFO - execute_twap_order:48 - Duration: 1 minutes, Slices: 2
+2025-10-24 11:45:48,742 - TradingBot - INFO - execute_twap_order:67 - Slice quantity: 0.005
+2025-10-24 11:45:48,743 - TradingBot - INFO - execute_twap_order:68 - Slice interval: 30.0 seconds
+2025-10-24 11:45:48,744 - TradingBot - INFO - _execute_slice:169 - Executing slice 1/2 for TWAP_BTCUSDT_BUY_1761286548
+2025-10-24 11:45:48,744 - TradingBot - INFO - execute_twap_order:98 - TWAP strategy TWAP_BTCUSDT_BUY_1761286548 started successfully
+2025-10-24 11:45:48,744 - TradingBot - INFO - _execute_slice:170 - Slice quantity: 0.005, Current price: 50000.0
+2025-10-24 11:45:48,745 - TradingBot - INFO - create_grid_strategy:48 - Creating grid strategy GRID_BTCUSDT_BUY_1761286548
+2025-10-24 11:45:48,746 - TradingBot - INFO - _execute_slice:197 - Slice 1 executed successfully: Order order_1761286548
+2025-10-24 11:45:48,746 - TradingBot - INFO - create_grid_strategy:49 - Symbol: BTCUSDT, Type: BUY
+2025-10-24 11:45:48,746 - TradingBot - INFO - _execute_slice:198 - Remaining quantity: 0.005
+2025-10-24 11:45:48,746 - TradingBot - INFO - create_grid_strategy:50 - Price range: 45000 - 55000
+2025-10-24 11:45:48,747 - TradingBot - INFO - _execute_slice:199 - Average price so far: 50000.00
+2025-10-24 11:45:48,747 - TradingBot - INFO - create_grid_strategy:51 - Grid count: 5, Quantity per level: 0.001
+2025-10-24 11:45:48,748 - TradingBot - INFO - _execute_grid_order:204 - Executing grid order at level 3 for GRID_BTCUSDT_BUY_1761286548
+2025-10-24 11:45:48,749 - TradingBot - INFO - create_grid_strategy:109 - Grid strategy GRID_BTCUSDT_BUY_1761286548 created and monitoring started
+2025-10-24 11:45:48,749 - TradingBot - INFO - _execute_grid_order:205 - Price: 50000.0, Quantity: 0.001, Side: BUY
+2025-10-24 11:45:48,750 - TradingBot - INFO - _execute_grid_order:227 - Grid order executed successfully: order_1761286548
+2025-10-24 11:45:48,751 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:45:48,752 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000.0 USDT (Available: 950.0)
+2025-10-24 11:45:48,753 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:45:48,753 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:45:48,754 - TradingBot - INFO - log_order_placement:100 - Order PLACED: LIMIT SELL 0.001 BTCUSDT @ 55000
+2025-10-24 11:45:48,755 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: OCO OCO_123 - ORDER_PLACED
+2025-10-24 11:45:48,755 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - STRATEGY_STARTED
+2025-10-24 11:45:48,755 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:45:48,756 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: GRID GRID_123 - GRID_CREATED
+2025-10-24 11:45:48,756 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:45:48,757 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50100 -> 49900 (-0.40%)
+2025-10-24 11:45:48,758 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 15 trades, 66.7% win rate, PnL: 250.75
+2025-10-24 11:45:48,758 - TradingBot - ERROR - log_error:150 - Error in API Connection: Simulated API connection error
+2025-10-24 11:45:48,759 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 255, in create_sample_log
+    raise ConnectionError("Simulated API connection error")
+ConnectionError: Simulated API connection error
+
+2025-10-24 11:46:34,701 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:46:34,701 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:46:34,702 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:46:34,702 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:46:34,702 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000 USDT (Available: 950)
+2025-10-24 11:46:34,702 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:46:34,703 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 10 trades, 70.0% win rate, PnL: 150.50
+2025-10-24 11:46:34,703 - TradingBot - ERROR - log_error:150 - Error in Test context: Test error for logging
+2025-10-24 11:46:34,703 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 44, in test_logging_system
+    raise ValueError("Test error for logging")
+ValueError: Test error for logging
+
+2025-10-24 11:46:34,704 - TradingBot - INFO - place_market_order:38 - Placing market BUY order for 0.001 BTCUSDT
+2025-10-24 11:46:34,704 - TradingBot - INFO - place_market_order:39 - Position side: BOTH
+2025-10-24 11:46:34,704 - TradingBot - INFO - place_market_order:58 - Market order placed successfully: 12345
+2025-10-24 11:46:34,705 - TradingBot - INFO - place_market_order:59 - Order status: FILLED
+2025-10-24 11:46:34,706 - TradingBot - INFO - place_market_order:60 - Executed quantity: 0.001
+2025-10-24 11:46:34,706 - TradingBot - INFO - place_market_order:61 - Average price: 50000
+2025-10-24 11:46:34,708 - TradingBot - INFO - place_limit_order:40 - Placing limit BUY order for 0.001 BTCUSDT at 50000
+2025-10-24 11:46:34,708 - TradingBot - INFO - place_limit_order:41 - Time in force: GTC, Position side: BOTH
+2025-10-24 11:46:34,709 - TradingBot - INFO - place_limit_order:68 - Limit order placed successfully: 12346
+2025-10-24 11:46:34,710 - TradingBot - INFO - place_limit_order:69 - Order status: NEW
+2025-10-24 11:46:34,711 - TradingBot - INFO - place_limit_order:70 - Order price: 50000
+2025-10-24 11:46:34,712 - TradingBot - INFO - place_limit_order:71 - Order quantity: 0.001
+2025-10-24 11:46:34,717 - TradingBot - INFO - place_oco_order:43 - Placing OCO SELL order for 0.001 BTCUSDT
+2025-10-24 11:46:34,717 - TradingBot - INFO - place_oco_order:44 - Limit price: 55000, Stop price: 50000, Stop limit: 49000
+2025-10-24 11:46:34,718 - TradingBot - INFO - place_oco_order:45 - Position side: BOTH
+2025-10-24 11:46:34,719 - TradingBot - ERROR - place_oco_order:101 - Unexpected error placing OCO order: For SELL orders: stop_price should be > limit_price
+2025-10-24 11:46:34,720 - TradingBot - INFO - place_stop_limit_order:41 - Placing stop-limit SELL order for 0.001 BTCUSDT
+2025-10-24 11:46:34,721 - TradingBot - INFO - place_stop_limit_order:42 - Stop price: 45000, Limit price: 44000
+2025-10-24 11:46:34,722 - TradingBot - INFO - place_stop_limit_order:43 - Position side: BOTH
+2025-10-24 11:46:34,722 - TradingBot - INFO - place_stop_limit_order:76 - Stop-limit order placed successfully: 12347
+2025-10-24 11:46:34,722 - TradingBot - INFO - place_stop_limit_order:77 - Order status: NEW
+2025-10-24 11:46:34,724 - TradingBot - ERROR - place_stop_limit_order:96 - Unexpected error placing stop-limit order: 'stopPrice'
+2025-10-24 11:46:34,726 - TradingBot - INFO - execute_twap_order:46 - Starting TWAP strategy TWAP_BTCUSDT_BUY_1761286594
+2025-10-24 11:46:34,727 - TradingBot - INFO - execute_twap_order:47 - Symbol: BTCUSDT, Side: BUY, Total Qty: 0.01
+2025-10-24 11:46:34,727 - TradingBot - INFO - execute_twap_order:48 - Duration: 1 minutes, Slices: 2
+2025-10-24 11:46:34,728 - TradingBot - INFO - execute_twap_order:67 - Slice quantity: 0.005
+2025-10-24 11:46:34,728 - TradingBot - INFO - execute_twap_order:68 - Slice interval: 30.0 seconds
+2025-10-24 11:46:34,731 - TradingBot - INFO - _execute_slice:169 - Executing slice 1/2 for TWAP_BTCUSDT_BUY_1761286594
+2025-10-24 11:46:34,732 - TradingBot - INFO - execute_twap_order:98 - TWAP strategy TWAP_BTCUSDT_BUY_1761286594 started successfully
+2025-10-24 11:46:34,732 - TradingBot - INFO - _execute_slice:170 - Slice quantity: 0.005, Current price: 50000.0
+2025-10-24 11:46:34,733 - TradingBot - INFO - create_grid_strategy:48 - Creating grid strategy GRID_BTCUSDT_BUY_1761286594
+2025-10-24 11:46:34,733 - TradingBot - INFO - _execute_slice:197 - Slice 1 executed successfully: Order order_1761286594
+2025-10-24 11:46:34,734 - TradingBot - INFO - create_grid_strategy:49 - Symbol: BTCUSDT, Type: BUY
+2025-10-24 11:46:34,735 - TradingBot - INFO - _execute_slice:198 - Remaining quantity: 0.005
+2025-10-24 11:46:34,735 - TradingBot - INFO - create_grid_strategy:50 - Price range: 45000 - 55000
+2025-10-24 11:46:34,736 - TradingBot - INFO - _execute_slice:199 - Average price so far: 50000.00
+2025-10-24 11:46:34,737 - TradingBot - INFO - create_grid_strategy:51 - Grid count: 5, Quantity per level: 0.001
+2025-10-24 11:46:34,738 - TradingBot - INFO - _execute_grid_order:204 - Executing grid order at level 3 for GRID_BTCUSDT_BUY_1761286594
+2025-10-24 11:46:34,738 - TradingBot - INFO - create_grid_strategy:109 - Grid strategy GRID_BTCUSDT_BUY_1761286594 created and monitoring started
+2025-10-24 11:46:34,738 - TradingBot - INFO - _execute_grid_order:205 - Price: 50000.0, Quantity: 0.001, Side: BUY
+2025-10-24 11:46:34,739 - TradingBot - INFO - _execute_grid_order:227 - Grid order executed successfully: order_1761286594
+2025-10-24 11:46:34,741 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:46:34,741 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000.0 USDT (Available: 950.0)
+2025-10-24 11:46:34,742 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:46:34,742 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:46:34,742 - TradingBot - INFO - log_order_placement:100 - Order PLACED: LIMIT SELL 0.001 BTCUSDT @ 55000
+2025-10-24 11:46:34,743 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: OCO OCO_123 - ORDER_PLACED
+2025-10-24 11:46:34,743 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - STRATEGY_STARTED
+2025-10-24 11:46:34,744 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:46:34,744 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: GRID GRID_123 - GRID_CREATED
+2025-10-24 11:46:34,745 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:46:34,745 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50100 -> 49900 (-0.40%)
+2025-10-24 11:46:34,746 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 15 trades, 66.7% win rate, PnL: 250.75
+2025-10-24 11:46:34,747 - TradingBot - ERROR - log_error:150 - Error in API Connection: Simulated API connection error
+2025-10-24 11:46:34,748 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 255, in create_sample_log
+    raise ConnectionError("Simulated API connection error")
+ConnectionError: Simulated API connection error
+
+2025-10-24 11:49:38,137 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:49:38,137 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:49:38,137 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:49:38,138 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:49:38,138 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000 USDT (Available: 950)
+2025-10-24 11:49:38,138 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:49:38,139 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 10 trades, 70.0% win rate, PnL: 150.50
+2025-10-24 11:49:38,140 - TradingBot - ERROR - log_error:150 - Error in Test context: Test error for logging
+2025-10-24 11:49:38,140 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 44, in test_logging_system
+    raise ValueError("Test error for logging")
+ValueError: Test error for logging
+
+2025-10-24 11:49:38,143 - TradingBot - INFO - place_market_order:38 - Placing market BUY order for 0.001 BTCUSDT
+2025-10-24 11:49:38,144 - TradingBot - INFO - place_market_order:39 - Position side: BOTH
+2025-10-24 11:49:38,145 - TradingBot - INFO - place_market_order:58 - Market order placed successfully: 12345
+2025-10-24 11:49:38,146 - TradingBot - INFO - place_market_order:59 - Order status: FILLED
+2025-10-24 11:49:38,147 - TradingBot - INFO - place_market_order:60 - Executed quantity: 0.001
+2025-10-24 11:49:38,148 - TradingBot - INFO - place_market_order:61 - Average price: 50000
+2025-10-24 11:49:38,151 - TradingBot - INFO - place_limit_order:40 - Placing limit BUY order for 0.001 BTCUSDT at 50000
+2025-10-24 11:49:38,151 - TradingBot - INFO - place_limit_order:41 - Time in force: GTC, Position side: BOTH
+2025-10-24 11:49:38,152 - TradingBot - INFO - place_limit_order:68 - Limit order placed successfully: 12346
+2025-10-24 11:49:38,152 - TradingBot - INFO - place_limit_order:69 - Order status: NEW
+2025-10-24 11:49:38,153 - TradingBot - INFO - place_limit_order:70 - Order price: 50000
+2025-10-24 11:49:38,154 - TradingBot - INFO - place_limit_order:71 - Order quantity: 0.001
+2025-10-24 11:49:38,157 - TradingBot - INFO - place_oco_order:43 - Placing OCO SELL order for 0.001 BTCUSDT
+2025-10-24 11:49:38,158 - TradingBot - INFO - place_oco_order:44 - Limit price: 55000, Stop price: 50000, Stop limit: 49000
+2025-10-24 11:49:38,159 - TradingBot - INFO - place_oco_order:45 - Position side: BOTH
+2025-10-24 11:49:38,159 - TradingBot - ERROR - place_oco_order:101 - Unexpected error placing OCO order: For SELL orders: stop_price should be > limit_price
+2025-10-24 11:49:38,160 - TradingBot - INFO - place_stop_limit_order:41 - Placing stop-limit SELL order for 0.001 BTCUSDT
+2025-10-24 11:49:38,161 - TradingBot - INFO - place_stop_limit_order:42 - Stop price: 45000, Limit price: 44000
+2025-10-24 11:49:38,162 - TradingBot - INFO - place_stop_limit_order:43 - Position side: BOTH
+2025-10-24 11:49:38,163 - TradingBot - INFO - place_stop_limit_order:76 - Stop-limit order placed successfully: 12347
+2025-10-24 11:49:38,164 - TradingBot - INFO - place_stop_limit_order:77 - Order status: NEW
+2025-10-24 11:49:38,164 - TradingBot - ERROR - place_stop_limit_order:96 - Unexpected error placing stop-limit order: 'stopPrice'
+2025-10-24 11:49:38,168 - TradingBot - INFO - execute_twap_order:46 - Starting TWAP strategy TWAP_BTCUSDT_BUY_1761286778
+2025-10-24 11:49:38,169 - TradingBot - INFO - execute_twap_order:47 - Symbol: BTCUSDT, Side: BUY, Total Qty: 0.01
+2025-10-24 11:49:38,169 - TradingBot - INFO - execute_twap_order:48 - Duration: 1 minutes, Slices: 2
+2025-10-24 11:49:38,170 - TradingBot - INFO - execute_twap_order:67 - Slice quantity: 0.005
+2025-10-24 11:49:38,172 - TradingBot - INFO - execute_twap_order:68 - Slice interval: 30.0 seconds
+2025-10-24 11:49:38,174 - TradingBot - INFO - _execute_slice:169 - Executing slice 1/2 for TWAP_BTCUSDT_BUY_1761286778
+2025-10-24 11:49:38,174 - TradingBot - INFO - execute_twap_order:98 - TWAP strategy TWAP_BTCUSDT_BUY_1761286778 started successfully
+2025-10-24 11:49:38,175 - TradingBot - INFO - _execute_slice:170 - Slice quantity: 0.005, Current price: 50000.0
+2025-10-24 11:49:38,176 - TradingBot - INFO - create_grid_strategy:48 - Creating grid strategy GRID_BTCUSDT_BUY_1761286778
+2025-10-24 11:49:38,177 - TradingBot - INFO - _execute_slice:197 - Slice 1 executed successfully: Order order_1761286778
+2025-10-24 11:49:38,178 - TradingBot - INFO - create_grid_strategy:49 - Symbol: BTCUSDT, Type: BUY
+2025-10-24 11:49:38,178 - TradingBot - INFO - _execute_slice:198 - Remaining quantity: 0.005
+2025-10-24 11:49:38,179 - TradingBot - INFO - create_grid_strategy:50 - Price range: 45000 - 55000
+2025-10-24 11:49:38,179 - TradingBot - INFO - _execute_slice:199 - Average price so far: 50000.00
+2025-10-24 11:49:38,180 - TradingBot - INFO - create_grid_strategy:51 - Grid count: 5, Quantity per level: 0.001
+2025-10-24 11:49:38,183 - TradingBot - INFO - _execute_grid_order:204 - Executing grid order at level 3 for GRID_BTCUSDT_BUY_1761286778
+2025-10-24 11:49:38,183 - TradingBot - INFO - create_grid_strategy:109 - Grid strategy GRID_BTCUSDT_BUY_1761286778 created and monitoring started
+2025-10-24 11:49:38,184 - TradingBot - INFO - _execute_grid_order:205 - Price: 50000.0, Quantity: 0.001, Side: BUY
+2025-10-24 11:49:38,186 - TradingBot - INFO - _execute_grid_order:227 - Grid order executed successfully: order_1761286778
+2025-10-24 11:49:38,189 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 11:49:38,191 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000.0 USDT (Available: 950.0)
+2025-10-24 11:49:38,192 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 11:49:38,194 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 11:49:38,194 - TradingBot - INFO - log_order_placement:100 - Order PLACED: LIMIT SELL 0.001 BTCUSDT @ 55000
+2025-10-24 11:49:38,195 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: OCO OCO_123 - ORDER_PLACED
+2025-10-24 11:49:38,196 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - STRATEGY_STARTED
+2025-10-24 11:49:38,197 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 11:49:38,197 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: GRID GRID_123 - GRID_CREATED
+2025-10-24 11:49:38,198 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 11:49:38,199 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50100 -> 49900 (-0.40%)
+2025-10-24 11:49:38,199 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 15 trades, 66.7% win rate, PnL: 250.75
+2025-10-24 11:49:38,200 - TradingBot - ERROR - log_error:150 - Error in API Connection: Simulated API connection error
+2025-10-24 11:49:38,201 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test_all_modules.py", line 255, in create_sample_log
+    raise ConnectionError("Simulated API connection error")
+ConnectionError: Simulated API connection error
+
+2025-10-24 14:56:25,253 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 14:56:25,254 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 14:56:25,254 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 14:56:25,254 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 14:56:25,255 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000 USDT (Available: 950)
+2025-10-24 14:56:25,255 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 14:56:25,255 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 10 trades, 70.0% win rate, PnL: 150.50
+2025-10-24 14:56:25,256 - TradingBot - ERROR - log_error:150 - Error in Test context: Test error for logging
+2025-10-24 14:56:25,257 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test.py", line 44, in test_logging_system
+    raise ValueError("Test error for logging")
+ValueError: Test error for logging
+
+2025-10-24 14:56:25,258 - TradingBot - INFO - place_market_order:38 - Placing market BUY order for 0.001 BTCUSDT
+2025-10-24 14:56:25,259 - TradingBot - INFO - place_market_order:39 - Position side: BOTH
+2025-10-24 14:56:25,259 - TradingBot - INFO - place_market_order:58 - Market order placed successfully: 12345
+2025-10-24 14:56:25,260 - TradingBot - INFO - place_market_order:59 - Order status: FILLED
+2025-10-24 14:56:25,261 - TradingBot - INFO - place_market_order:60 - Executed quantity: 0.001
+2025-10-24 14:56:25,262 - TradingBot - INFO - place_market_order:61 - Average price: 50000
+2025-10-24 14:56:25,266 - TradingBot - INFO - place_limit_order:40 - Placing limit BUY order for 0.001 BTCUSDT at 50000
+2025-10-24 14:56:25,266 - TradingBot - INFO - place_limit_order:41 - Time in force: GTC, Position side: BOTH
+2025-10-24 14:56:25,267 - TradingBot - INFO - place_limit_order:68 - Limit order placed successfully: 12346
+2025-10-24 14:56:25,268 - TradingBot - INFO - place_limit_order:69 - Order status: NEW
+2025-10-24 14:56:25,269 - TradingBot - INFO - place_limit_order:70 - Order price: 50000
+2025-10-24 14:56:25,270 - TradingBot - INFO - place_limit_order:71 - Order quantity: 0.001
+2025-10-24 14:56:25,273 - TradingBot - INFO - place_oco_order:43 - Placing OCO SELL order for 0.001 BTCUSDT
+2025-10-24 14:56:25,273 - TradingBot - INFO - place_oco_order:44 - Limit price: 55000, Stop price: 50000, Stop limit: 49000
+2025-10-24 14:56:25,274 - TradingBot - INFO - place_oco_order:45 - Position side: BOTH
+2025-10-24 14:56:25,276 - TradingBot - ERROR - place_oco_order:101 - Unexpected error placing OCO order: For SELL orders: stop_price should be > limit_price
+2025-10-24 14:56:25,276 - TradingBot - INFO - place_stop_limit_order:41 - Placing stop-limit SELL order for 0.001 BTCUSDT
+2025-10-24 14:56:25,278 - TradingBot - INFO - place_stop_limit_order:42 - Stop price: 45000, Limit price: 44000
+2025-10-24 14:56:25,278 - TradingBot - INFO - place_stop_limit_order:43 - Position side: BOTH
+2025-10-24 14:56:25,278 - TradingBot - INFO - place_stop_limit_order:76 - Stop-limit order placed successfully: 12347
+2025-10-24 14:56:25,279 - TradingBot - INFO - place_stop_limit_order:77 - Order status: NEW
+2025-10-24 14:56:25,280 - TradingBot - ERROR - place_stop_limit_order:96 - Unexpected error placing stop-limit order: 'stopPrice'
+2025-10-24 14:56:25,283 - TradingBot - INFO - execute_twap_order:46 - Starting TWAP strategy TWAP_BTCUSDT_BUY_1761297985
+2025-10-24 14:56:25,284 - TradingBot - INFO - execute_twap_order:47 - Symbol: BTCUSDT, Side: BUY, Total Qty: 0.01
+2025-10-24 14:56:25,284 - TradingBot - INFO - execute_twap_order:48 - Duration: 1 minutes, Slices: 2
+2025-10-24 14:56:25,285 - TradingBot - INFO - execute_twap_order:67 - Slice quantity: 0.005
+2025-10-24 14:56:25,286 - TradingBot - INFO - execute_twap_order:68 - Slice interval: 30.0 seconds
+2025-10-24 14:56:25,288 - TradingBot - INFO - _execute_slice:169 - Executing slice 1/2 for TWAP_BTCUSDT_BUY_1761297985
+2025-10-24 14:56:25,288 - TradingBot - INFO - execute_twap_order:98 - TWAP strategy TWAP_BTCUSDT_BUY_1761297985 started successfully
+2025-10-24 14:56:25,289 - TradingBot - INFO - _execute_slice:170 - Slice quantity: 0.005, Current price: 50000.0
+2025-10-24 14:56:25,290 - TradingBot - INFO - create_grid_strategy:48 - Creating grid strategy GRID_BTCUSDT_BUY_1761297985
+2025-10-24 14:56:25,290 - TradingBot - INFO - _execute_slice:197 - Slice 1 executed successfully: Order order_1761297985
+2025-10-24 14:56:25,290 - TradingBot - INFO - create_grid_strategy:49 - Symbol: BTCUSDT, Type: BUY
+2025-10-24 14:56:25,291 - TradingBot - INFO - _execute_slice:198 - Remaining quantity: 0.005
+2025-10-24 14:56:25,291 - TradingBot - INFO - create_grid_strategy:50 - Price range: 45000 - 55000
+2025-10-24 14:56:25,292 - TradingBot - INFO - _execute_slice:199 - Average price so far: 50000.00
+2025-10-24 14:56:25,293 - TradingBot - INFO - create_grid_strategy:51 - Grid count: 5, Quantity per level: 0.001
+2025-10-24 14:56:25,294 - TradingBot - INFO - _execute_grid_order:204 - Executing grid order at level 3 for GRID_BTCUSDT_BUY_1761297985
+2025-10-24 14:56:25,294 - TradingBot - INFO - create_grid_strategy:109 - Grid strategy GRID_BTCUSDT_BUY_1761297985 created and monitoring started
+2025-10-24 14:56:25,294 - TradingBot - INFO - _execute_grid_order:205 - Price: 50000.0, Quantity: 0.001, Side: BUY
+2025-10-24 14:56:25,295 - TradingBot - INFO - _execute_grid_order:227 - Grid order executed successfully: order_1761297985
+2025-10-24 14:56:25,297 - TradingBot - INFO - log_api_request:78 - API Request: GET /fapi/v1/account
+2025-10-24 14:56:25,298 - TradingBot - INFO - log_account_balance:166 - Account Balance: 1000.0 USDT (Available: 950.0)
+2025-10-24 14:56:25,298 - TradingBot - INFO - log_order_placement:100 - Order PLACED: MARKET BUY 0.001 BTCUSDT @ 50000
+2025-10-24 14:56:25,299 - TradingBot - INFO - log_order_execution:118 - Order Executed: 12345 - 0.001 BTCUSDT @ 50000
+2025-10-24 14:56:25,300 - TradingBot - INFO - log_order_placement:100 - Order PLACED: LIMIT SELL 0.001 BTCUSDT @ 55000
+2025-10-24 14:56:25,300 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: OCO OCO_123 - ORDER_PLACED
+2025-10-24 14:56:25,301 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - STRATEGY_STARTED
+2025-10-24 14:56:25,301 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: TWAP TWAP_123 - SLICE_EXECUTED
+2025-10-24 14:56:25,302 - TradingBot - INFO - log_strategy_event:134 - Strategy Event: GRID GRID_123 - GRID_CREATED
+2025-10-24 14:56:25,302 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50000 -> 50100 (+0.20%)
+2025-10-24 14:56:25,303 - TradingBot - INFO - log_price_movement:182 - Price Movement: BTCUSDT 50100 -> 49900 (-0.40%)
+2025-10-24 14:56:25,303 - TradingBot - INFO - log_performance_metrics:202 - Performance: STRATEGY_123 - 15 trades, 66.7% win rate, PnL: 250.75
+2025-10-24 14:56:25,304 - TradingBot - ERROR - log_error:150 - Error in API Connection: Simulated API connection error
+2025-10-24 14:56:25,306 - TradingBot - ERROR - log_error:151 - Stack trace: Traceback (most recent call last):
+  File "C:\Users\bhong\OneDrive\Desktop\TECHNOLOGY\Projects\binancetrade_bot\test.py", line 255, in create_sample_log
+    raise ConnectionError("Simulated API connection error")
+ConnectionError: Simulated API connection error
+
