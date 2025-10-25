@@ -221,4 +221,4 @@ For issues or questions:
 
 ## License
 
-This project is created for educational purposes as part of an assignment.
+This project is created for educational purposes.
